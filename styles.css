@@ -3,6 +3,7 @@
     --neon-purple: #bc13fe;
     --dark-bg: #0a0a0a;
     --text-color: #ffffff;
+    --primary: #D7E4E4;
 }
 
 * {
@@ -12,7 +13,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, sans-serif;
     background-color: var(--dark-bg);
     color: var(--text-color);
@@ -20,6 +21,14 @@ body {
 }
 
 /* Navigation */
+.navbar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -27,17 +36,21 @@ body {
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
+    width: 70%;
     z-index: 1000;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    border-radius: 15px;
 }
 
 .nav-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary);
+    font-family: "Source Serif 4", serif;
+    cursor: pointer;
+    margin-left: -100px;
 }
 
 .nav-links a,
@@ -63,6 +76,7 @@ body {
     text-align: center;
     padding: 2rem;
     position: relative;
+    padding-top: 100px;
 }
 
 .hero h1 {
@@ -74,12 +88,8 @@ body {
 }
 
 .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0;
+    height: 70%;
 }
 
 .hero-image img {
@@ -92,12 +102,14 @@ body {
 .hero-text {
     font-size: 120px;
     font-weight: 600;
+    color: #d7e4e4;
+    font-family: "Outfit", serif;
 }
 
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 2rem;
     padding: 4rem 2rem;
 }
@@ -133,9 +145,9 @@ body {
 .bio {
     text-align: center;
     padding: 4rem 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    font-size: 1.25rem;
+    font-size: 48px;
 }
 
 /* Contact Section */
@@ -156,25 +168,33 @@ body {
     height: 50px;
     text-align: center;
     font-size: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--neon-blue);
+    background: #B8E0E01F;
     border-radius: 10px;
     color: var(--text-color);
+    border: none;
 }
 
 .send-button {
-    padding: 0.75rem 3rem;
+    padding: 0.75rem 4rem;
     font-size: 1rem;
-    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    background: #00FFFF;
     border: none;
     border-radius: 25px;
-    color: var(--text-color);
     cursor: pointer;
     transition: transform 0.3s ease;
+    font-family: "Outfit";
 }
 
 .send-button:hover {
     transform: scale(1.05);
+}
+
+.send-button-2 {
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #00FFFF;
 }
 
 .dots {
@@ -197,13 +217,15 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .follow {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    border: 1px solid #B8E0E01F;
+    border-radius: 15px;
+    padding: 10px 20px;
 }
 
 .follow:hover {
