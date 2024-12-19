@@ -64,7 +64,7 @@ body {
 
 .nav-brand {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary);
     font-family: "Source Serif 4", serif;
     letter-spacing: 1px;
@@ -115,8 +115,8 @@ body {
     display: none;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 100%;
+    position: relative;
+    top: 12%;
     left: 0;
     width: 100%;
     padding: 1rem 0;
@@ -193,6 +193,7 @@ body {
     overflow: hidden;
     border-radius: 15px;
     transition: transform 0.3s ease;
+    font-family: "Outfit";
 }
 
 .portfolio-item:hover {
@@ -221,11 +222,13 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     font-size: 48px;
+    font-family: "Outfit";
 }
 
 .contact {
     text-align: center;
     padding: 4rem 2rem;
+    font-family: "Outfit";
 }
 
 .pin-input {
@@ -288,6 +291,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+    font-family: "Outfit";
 }
 
 .follow {
@@ -337,17 +341,17 @@ footer {
     .nav-links-2 { 
         display: flex;
     }
+
     .hidden-links { 
         display: flex;
-        
     }
 
     .hero {
         min-height: 50vw;
         display: flex;
-        padding-top: 50px;
-        
+        padding-top: 50px; 
     }
+
     .nav-links {
         display: none;
     }
