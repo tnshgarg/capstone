@@ -1,9 +1,14 @@
 :root {
-    --neon-blue: #00f3ff;
-    --neon-purple: #bc13fe;
-    --dark-bg: #0a0a0a;
-    --text-color: #ffffff;
-    --primary: #D7E4E4;
+    --primary: #fff;
+    --text-color: #fff;
+    --neon-blue: #00e5ff;
+    --dark-bg: #121212;
+    --nav-bg: rgba(0, 0, 0, 0.7);
+    --nav-shadow: rgba(0, 0, 0, 0.3);
+    --links-bg: rgba(0, 0, 0, 0.9);
+    --hero-color: #d7e4e4;
+    --portfolio-item-color: rgba(255, 255, 255, 0.7);
+    --input-bg: #B8E0E01F
 }
 
 * {
@@ -19,29 +24,6 @@ body {
     line-height: 1.6;
 }
 
-:root {
-    --primary: #00bcd4;
-    --text-color: #fff;
-    --neon-blue: #00e5ff;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #121212;
-}
-:root {
-    --primary: #fff;
-    --text-color: #fff;
-    --neon-blue: #00e5ff;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #121212;
-}
-
 .navbar-container {
     width: 100%;
     display: flex;
@@ -54,18 +36,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--nav-bg);
     padding: 1rem 2rem;
     width: 90%;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px var(--nav-shadow);
     position: relative;
 }
 
 .nav-brand {
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--primary);
+    color: var(--text-color);
     font-family: "Source Serif 4", serif;
     letter-spacing: 1px;
     text-align: center;
@@ -114,7 +96,7 @@ body {
 .responsive-links {
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--links-bg);
     position: relative;
     top: 12%;
     left: 0;
@@ -136,10 +118,6 @@ body {
 
 .responsive-links a:hover {
     color: var(--neon-blue);
-}
-
-@media (max-width: 768px) {
-    
 }
 
 .hero {
@@ -177,7 +155,7 @@ body {
 .hero-text {
     font-size: 120px;
     font-weight: 600;
-    color: #d7e4e4;
+    color: var(--hero-color);
     font-family: "Outfit", serif;
 }
 
@@ -213,7 +191,7 @@ body {
 }
 
 .portfolio-item p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--portfolio-item-color);
 }
 
 .bio {
@@ -243,7 +221,7 @@ body {
     height: 50px;
     text-align: center;
     font-size: 1.5rem;
-    background: #B8E0E01F;
+    background: var(--input-bg);
     border-radius: 10px;
     color: var(--text-color);
     border: none;
@@ -252,7 +230,7 @@ body {
 .send-button {
     padding: 0.75rem 4rem;
     font-size: 1rem;
-    background: #00FFFF;
+    background: var(--neon-blue);
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -269,22 +247,9 @@ body {
     margin-top: 20px;
     cursor: pointer;
     font-size: 14px;
-    color: #00FFFF;
+    color: var(--neon-blue);
 }
 
-.dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-}
 
 footer {
     display: flex;
@@ -298,7 +263,7 @@ footer {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
-    border: 1px solid #B8E0E01F;
+    border: 1px solid var(--input-bg);
     border-radius: 15px;
     padding: 10px 20px;
 }
